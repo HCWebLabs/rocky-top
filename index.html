@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rocky Top, Tennessee - Where history meets adventure. Explore world-class outdoor recreation, powerful Appalachian heritage, and a revitalized community 30 minutes from Knoxville.">
+    <meta name="keywords" content="Rocky Top Tennessee, Windrock Park, Norris Lake, Cove Lake, Coal Creek War, ATV trails, fishing, outdoor recreation, Appalachia">
+    <title>Rocky Top, Tennessee | Where History Meets Adventure</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* ===== CSS CUSTOM PROPERTIES ===== */
+        :root {
+            /* Colors - Premium Appalachian palette */
+            --color-forest: #2d5016;
+            --color-forest-light: #4a7c2c;
+            --color-lake: #1e5f8c;
+            --color-lake-light: #2b7bb9;
+            --color-autumn: #d4721f;
+            --color-autumn-light: #e89442;
+            --color-earth: #7a5c3d;
+            --color-earth-light: #9d7a5c;
+            --color-cream: #f5f1e8;
+            --color-white: #ffffff;
+            --color-text: #2a2a2a;
+            --color-text-light: #555555;
+            
+            /* Typography */
+            --font-heading: 'Georgia', 'Times New Roman', serif;
+            --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            
+            /* Fluid typography - Compact */
+            --text-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.8rem);
+            --text-sm: clamp(0.8rem, 0.75rem + 0.25vw, 0.9rem);
+            --text-base: clamp(0.9rem, 0.85rem + 0.25vw, 1rem);
+            --text-lg: clamp(1rem, 0.95rem + 0.5vw, 1.25rem);
+            --text-xl: clamp(1.15rem, 1rem + 0.75vw, 1.5rem);
+            --text-2xl: clamp(1.4rem, 1.2rem + 1vw, 2rem);
+            --text-3xl: clamp(1.75rem, 1.4rem + 1.75vw, 2.75rem);
+            --text-4xl: clamp(2.25rem, 1.75rem + 2.5vw, 3.5rem);
+            
+            /* Spacing - COMPACT/SKINNY */
+            --space-xs: clamp(0.25rem, 0.2rem + 0.25vw, 0.375rem);
+            --space-sm: clamp(0.4rem, 0.35rem + 0.25vw, 0.6rem);
+            --space-md: clamp(0.75rem, 0.6rem + 0.5vw, 1rem);
+            --space-lg: clamp(1rem, 0.85rem + 0.75vw, 1.5rem);
+            --space-xl: clamp(1.5rem, 1.25rem + 1.25vw, 2.25rem);
+            --space-2xl: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
+            
+            /* Layout */
+            --container-width: 1400px;
+            --nav-height: 60px;
+            
+            /* Transitions */
+            --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* ===== BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background: var(--color-cream);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+        
+        /* ===== VIEW TRANSITIONS API ===== */
+        @view-transition {
+            navigation: auto;
+        }
+        
+        /* Disable animations for users who prefer reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .bg-section {
+                background-attachment: scroll !important;
+            }
+        }
+        
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            line-height: 1.1;
+            font-weight: 700;
+        }
+        
+        h1 {
+            font-size: var(--text-4xl);
+            margin-bottom: var(--space-sm);
+        }
+        
+        h2 {
+            font-size: var(--text-3xl);
+            margin-bottom: var(--space-md);
+            color: var(--color-forest);
+        }
+        
+        h3 {
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-sm);
+        }
+        
+        p {
+            font-size: var(--text-base);
+            margin-bottom: var(--space-sm);
+            color: var(--color-text-light);
+        }
+        
+        a {
+            color: var(--color-lake);
+            text-decoration: none;
+            transition: color var(--transition-smooth);
+        }
+        
+        a:hover, a:focus {
+            color: var(--color-lake-light);
+            text-decoration: underline;
+        }
+        
+        /* ===== LAYOUT UTILITIES ===== */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 clamp(0.75rem, 1.5vw, 1.5rem);
+        }
+        
+        section {
+            padding: var(--space-xl) 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Background sections */
+        .bg-section {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .bg-overlay {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Scroll-driven animation setup */
+        @supports (animation-timeline: scroll()) {
+            .fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                animation: fade-in-up linear forwards;
+                animation-timeline: view();
+                animation-range: entry 0% cover 25%;
+            }
+        }
+        
+        @keyframes fade-in-up {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @supports not (animation-timeline: scroll()) {
+            .fade-in {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* ===== NAVIGATION ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+            transition: transform var(--transition-smooth);
+            height: var(--nav-height);
+        }
+        
+        nav.hidden {
+            transform: translateY(-100%);
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: var(--nav-height);
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+        .nav-brand {
+            font-family: var(--font-heading);
+            font-size: clamp(1.1rem, 0.9rem + 1vw, 1.5rem);
+            font-weight: 700;
+            color: var(--color-forest);
+        }
+        
+        .nav-links {
+            display: none;
+            list-style: none;
+            gap: clamp(0.75rem, 1.5vw, 2rem);
+        }
+        
+        .nav-links a {
+            color: var(--color-text);
+            font-weight: 600;
+            font-size: var(--text-sm);
+            position: relative;
+            padding: 0.25rem 0;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-autumn);
+            transition: width var(--transition-smooth);
+        }
+        
+        .nav-links a:hover::after,
+        .nav-links a:focus::after {
+            width: 100%;
+        }
+        
+        .nav-toggle {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.4rem;
+            z-index: 1001;
+        }
+        
+        .nav-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--color-forest);
+            margin: 4px 0;
+            transition: transform var(--transition-smooth);
+        }
+        
+        /* Mobile menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: var(--nav-height);
+            left: 0;
+            right: 0;
+            background: var(--color-white);
+            padding: 1.25rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            max-height: calc(100vh - var(--nav-height));
+            overflow-y: auto;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .mobile-menu ul {
+            list-style: none;
+        }
+        
+        .mobile-menu li {
+            margin-bottom: 1rem;
+        }
+        
+        .mobile-menu a {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            font-weight: 600;
+        }
+        
+        /* ===== HERO SECTION ===== */
+        #hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: var(--nav-height);
+            overflow: hidden;
+            background-image: linear-gradient(135deg, rgba(45, 80, 22, 0.85) 0%, rgba(30, 95, 140, 0.8) 100%),
+                              url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .hero-content {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            color: var(--color-white);
+        }
+        
+        .hero-content h1 {
+            color: var(--color-white);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        }
+        
+        .hero-tagline {
+            font-size: var(--text-xl);
+            margin-bottom: var(--space-md);
+            color: var(--color-cream);
+            font-weight: 300;
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            padding: var(--space-md);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            transition: all var(--transition-smooth);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--color-autumn-light);
+            background: rgba(255, 255, 255, 0.18);
+        }
+        
+        .stat-number {
+            font-size: var(--text-3xl);
+            font-weight: 700;
+            color: var(--color-autumn-light);
+            display: block;
+            margin-bottom: var(--space-xs);
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: var(--text-xs);
+            color: var(--color-cream);
+            line-height: 1.3;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: clamp(0.7rem, 0.6rem + 0.5vw, 1rem) clamp(1.75rem, 1.5rem + 1vw, 2.5rem);
+            background: var(--color-autumn);
+            color: var(--color-white);
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: var(--text-base);
+            transition: all var(--transition-smooth);
+            box-shadow: 0 4px 20px rgba(212, 114, 31, 0.4);
+            border: none;
+            cursor: pointer;
+            margin-top: var(--space-md);
+            letter-spacing: 0.5px;
+        }
+        
+        .cta-button:hover, .cta-button:focus {
+            background: var(--color-autumn-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(212, 114, 31, 0.5);
+            text-decoration: none;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            opacity: 0.9;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-8px); }
+            60% { transform: translateX(-50%) translateY(-4px); }
+        }
+        
+        .scroll-indicator i {
+            font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+            color: var(--color-white);
+        }
+        
+        /* ===== SECTION HEADERS ===== */
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .section-subtitle {
+            font-size: var(--text-xs);
+            color: var(--color-autumn);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .section-header p {
+            font-size: var(--text-base);
+            color: var(--color-text-light);
+            max-width: 100%;
+        }
+        
+        /* ===== STORY SECTION - ZIGZAG TIMELINE WITH BACKGROUND ===== */
+        #story {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.95)),
+                              url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--color-autumn), var(--color-forest));
+            display: none;
+        }
+        
+        .timeline-item {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            padding: var(--space-md);
+            border-radius: 12px;
+            margin-bottom: var(--space-md);
+            border-left: 4px solid var(--color-autumn);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            transition: all var(--transition-smooth);
+        }
+        
+        .timeline-item:hover {
+            transform: translateX(6px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-left-color: var(--color-forest);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        .timeline-year {
+            display: inline-block;
+            font-size: var(--text-xs);
+            font-weight: 700;
+            color: var(--color-white);
+            background: var(--color-autumn);
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            margin-bottom: var(--space-sm);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .timeline-item h3 {
+            color: var(--color-forest);
+            margin-bottom: var(--space-xs);
+            font-size: var(--text-lg);
+        }
+        
+        .timeline-item p {
+            color: var(--color-text-light);
+            margin-bottom: 0;
+            font-size: var(--text-sm);
+            line-height: 1.5;
+        }
+        
+        /* ===== ADVENTURES SECTION - FEATURED CARD WITH BACKGROUND ===== */
+        #adventures {
+            color: var(--color-white);
+            background-image: linear-gradient(135deg, rgba(45, 80, 22, 0.92) 0%, rgba(74, 124, 44, 0.9) 100%),
+                              url('https://images.unsplash.com/photo-1533130061792-64b345e4a833?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        #adventures h2,
+        #adventures h3 {
+            color: var(--color-white);
+        }
+        
+        #adventures p {
+            color: var(--color-cream);
+        }
+        
+        #adventures .section-header p {
+            color: var(--color-cream);
+        }
+        
+        .adventure-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+        }
+        
+        .adventure-card.featured {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: var(--space-lg);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+        }
+        
+        .adventure-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: var(--space-md);
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .adventure-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--color-autumn-light);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .adventure-icon {
+            font-size: clamp(2.5rem, 2rem + 2vw, 3.5rem);
+            margin-bottom: var(--space-sm);
+            color: var(--color-autumn-light);
+        }
+        
+        .adventure-card h3 {
+            color: var(--color-autumn-light);
+            margin-bottom: var(--space-sm);
+            font-size: var(--text-lg);
+        }
+        
+        .adventure-card p {
+            flex-grow: 1;
+            font-size: var(--text-sm);
+            line-height: 1.5;
+        }
+        
+        /* ===== BUSINESSES SECTION - MASONRY WITH BACKGROUND ===== */
+        #businesses {
+            background-image: linear-gradient(rgba(245, 241, 232, 0.85), rgba(245, 241, 232, 0.88)),
+                              url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        .business-categories {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+        }
+        
+        .category {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            padding: var(--space-md);
+            border-radius: 14px;
+            border: 2px solid rgba(212, 114, 31, 0.2);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+            transition: all var(--transition-smooth);
+        }
+        
+        .category:hover {
+            border-color: var(--color-autumn);
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            background: var(--color-white);
+        }
+        
+        .category h3 {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+            color: var(--color-forest);
+            border-bottom: 2px solid rgba(212, 114, 31, 0.15);
+            padding-bottom: var(--space-sm);
+            font-size: var(--text-lg);
+        }
+        
+        .category-icon {
+            font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+            color: var(--color-autumn);
+        }
+        
+        .business-list {
+            list-style: none;
+        }
+        
+        .business-list li {
+            padding: var(--space-xs) 0;
+            color: var(--color-text-light);
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: var(--text-sm);
+            line-height: 1.5;
+        }
+        
+        .business-list li::before {
+            content: '\f061';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--color-autumn);
+            font-size: 0.75rem;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #c2410c 0%, #f97316 50%, #ea580c 100%);
+            color: var(--color-white);
+            padding: var(--space-lg);
+            border-radius: 16px;
+            text-align: center;
+            margin-top: var(--space-lg);
+            box-shadow: 0 8px 30px rgba(194, 65, 12, 0.5),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 10;
+            isolation: isolate;
+        }
+        
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+            pointer-events: none;
+        }
+        
+        .highlight-box p {
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .highlight-box p {
+            color: var(--color-white);
+            font-size: var(--text-base);
+            font-weight: 600;
+            max-width: 100%;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+        
+        /* ===== EVENTS SECTION - BENTO BOX ===== */
+        #events {
+            background: var(--color-white);
+        }
+        
+        .event-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+        }
+        
+        .event-card {
+            background: var(--color-cream);
+            padding: var(--space-lg);
+            border-radius: 14px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+            transition: all var(--transition-smooth);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .event-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-autumn), var(--color-forest));
+        }
+        
+        .event-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+            border-color: var(--color-autumn);
+        }
+        
+        .event-card h3 {
+            color: var(--color-forest);
+            font-size: var(--text-lg);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .event-card h3 i {
+            color: var(--color-autumn);
+            margin-right: var(--space-xs);
+        }
+        
+        .event-card p {
+            color: var(--color-text-light);
+            font-size: var(--text-sm);
+            line-height: 1.5;
+        }
+        
+        /* ===== VISIT SECTION - SPLIT LAYOUT WITH BACKGROUND ===== */
+        #visit {
+            color: var(--color-white);
+            background-image: linear-gradient(135deg, rgba(30, 95, 140, 0.92) 0%, rgba(43, 123, 185, 0.9) 100%),
+                              url('https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        #visit h2,
+        #visit h3 {
+            color: var(--color-white);
+        }
+        
+        #visit p {
+            color: var(--color-cream);
+        }
+        
+        #visit .section-header p {
+            color: var(--color-cream);
+        }
+        
+        .visit-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+        }
+        
+        .visit-info {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            padding: var(--space-md);
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            transition: all var(--transition-smooth);
+        }
+        
+        .visit-info:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: translateY(-4px);
+            border-color: var(--color-autumn-light);
+        }
+        
+        .visit-info h3 {
+            color: var(--color-autumn-light);
+            margin-bottom: var(--space-md);
+            font-size: var(--text-lg);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .visit-info h3 i {
+            font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+        }
+        
+        .info-item {
+            margin-bottom: var(--space-sm);
+            padding-left: 1.75rem;
+            position: relative;
+            font-size: var(--text-sm);
+            color: var(--color-cream);
+            line-height: 1.5;
+        }
+        
+        .info-item::before {
+            content: '\f3c5';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--color-autumn-light);
+            font-size: 1rem;
+        }
+        
+        /* ===== CONTACT SECTION - CARD GRID ===== */
+        #contact {
+            background: var(--color-cream);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+        
+        .contact-card {
+            background: var(--color-white);
+            padding: var(--space-lg);
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 3px 18px rgba(0, 0, 0, 0.06);
+            border: 2px solid rgba(212, 114, 31, 0.1);
+            transition: all var(--transition-smooth);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            border-color: var(--color-autumn);
+        }
+        
+        .contact-icon {
+            font-size: clamp(2.5rem, 2rem + 2vw, 3.25rem);
+            margin-bottom: var(--space-md);
+            color: var(--color-autumn);
+        }
+        
+        .contact-card h3 {
+            color: var(--color-forest);
+            margin-bottom: var(--space-md);
+            font-size: var(--text-xl);
+        }
+        
+        .contact-card p {
+            color: var(--color-text-light);
+            margin-bottom: var(--space-xs);
+            font-size: var(--text-sm);
+            line-height: 1.5;
+        }
+        
+        .contact-card a {
+            color: var(--color-lake);
+            font-weight: 600;
+        }
+        
+        .website-highlight {
+            background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-forest-light) 100%);
+            color: var(--color-white);
+            padding: var(--space-xl);
+            border-radius: 18px;
+            text-align: center;
+            margin-top: var(--space-lg);
+            box-shadow: 0 8px 30px rgba(45, 80, 22, 0.3);
+        }
+        
+        .website-highlight h3 {
+            color: var(--color-white);
+            margin-bottom: var(--space-md);
+        }
+        
+        .website-highlight a {
+            color: var(--color-autumn-light);
+            font-size: var(--text-xl);
+            font-weight: 700;
+            display: inline-block;
+            padding: var(--space-sm) var(--space-lg);
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            transition: all var(--transition-smooth);
+        }
+        
+        .website-highlight a:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: scale(1.03);
+            text-decoration: none;
+        }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            background: linear-gradient(135deg, var(--color-text) 0%, #1a1a1a 100%);
+            color: var(--color-cream);
+            padding: var(--space-xl) 0 var(--space-md);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .footer-section h4 {
+            color: var(--color-white);
+            font-size: var(--text-lg);
+            margin-bottom: var(--space-md);
+            font-weight: 700;
+            border-bottom: 2px solid var(--color-autumn);
+            padding-bottom: var(--space-xs);
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: var(--color-cream);
+            font-size: var(--text-sm);
+            line-height: 1.7;
+        }
+        
+        .footer-section a {
+            display: block;
+            margin-bottom: var(--space-xs);
+            transition: color var(--transition-smooth), transform var(--transition-smooth);
+        }
+        
+        .footer-section a:hover,
+        .footer-section a:focus {
+            color: var(--color-autumn-light);
+            transform: translateX(4px);
+            text-decoration: none;
+        }
+        
+        .footer-about p {
+            margin-bottom: var(--space-sm);
+            line-height: 1.6;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .footer-links a::before {
+            content: '\f105';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            margin-right: var(--space-xs);
+            color: var(--color-autumn);
+        }
+        
+        .footer-contact p {
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+        }
+        
+        .footer-contact i {
+            color: var(--color-autumn);
+            margin-top: 0.25rem;
+            font-size: var(--text-base);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: var(--space-md);
+            margin-top: var(--space-md);
+            flex-wrap: wrap;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--color-white);
+            transition: all var(--transition-smooth);
+        }
+        
+        .social-links a:hover {
+            background: var(--color-autumn);
+            transform: translateY(-3px);
+            text-decoration: none;
+        }
+        
+        .social-links i {
+            font-size: 1.1rem;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--space-md);
+            text-align: center;
+        }
+        
+        .footer-bottom p {
+            color: var(--color-cream);
+            margin-bottom: var(--space-xs);
+            font-size: var(--text-xs);
+        }
+        
+        .footer-bottom a {
+            color: var(--color-autumn-light);
+        }
+        
+        /* ===== SCROLL TO TOP BUTTON ===== */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--color-autumn);
+            color: var(--color-white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(212, 114, 31, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all var(--transition-smooth);
+            z-index: 999;
+        }
+        
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .scroll-to-top:hover,
+        .scroll-to-top:focus {
+            background: var(--color-autumn-light);
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(212, 114, 31, 0.5);
+        }
+        
+        .scroll-to-top i {
+            font-size: 1.25rem;
+        }
+        
+        /* ===== RESPONSIVE DESIGN - MOBILE FIRST ===== */
+        
+        /* Mobile - disable fixed backgrounds for better performance */
+        @media (max-width: 767px) {
+            #hero, #story, #adventures, #businesses, #visit {
+                background-attachment: scroll !important;
+            }
+            
+            /* Scroll to top button - smaller and adjusted position on mobile */
+            .scroll-to-top {
+                width: 45px;
+                height: 45px;
+                bottom: 1.25rem;
+                right: 1.25rem;
+            }
+            
+            .scroll-to-top i {
+                font-size: 1.1rem;
+            }
+        }
+        
+        /* Tablet - 768px and up */
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+            
+            .nav-toggle {
+                display: none;
+            }
+            
+            /* Footer - 2 columns */
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            /* Timeline gets center line and zigzag */
+            .timeline::before {
+                display: block;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .timeline-item {
+                width: calc(50% - 1.5rem);
+                margin-bottom: var(--space-lg);
+            }
+            
+            .timeline-item:nth-child(odd) {
+                margin-left: 0;
+                margin-right: auto;
+                border-left: 4px solid var(--color-autumn);
+                border-right: none;
+            }
+            
+            .timeline-item:nth-child(even) {
+                margin-left: auto;
+                margin-right: 0;
+                border-right: 4px solid var(--color-autumn);
+                border-left: none;
+            }
+            
+            .timeline-item:nth-child(even):hover {
+                transform: translateX(-6px);
+            }
+            
+            /* Adventure grid - 2 columns */
+            .adventure-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .adventure-card.featured {
+                grid-column: 1 / -1;
+            }
+            
+            /* Business categories - 2 columns */
+            .business-categories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            /* Events - 2 columns */
+            .event-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            /* Visit grid - 2 columns */
+            .visit-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            /* Contact grid - 2 columns */
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* Desktop - 1024px and up */
+        @media (min-width: 1024px) {
+            /* Footer - 4 columns */
+            .footer-content {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            /* Adventure grid - 3 columns with featured spanning 2 */
+            .adventure-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .adventure-card.featured {
+                grid-column: 1 / 3;
+            }
+            
+            /* Events - 3 columns */
+            .event-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        /* Large Desktop - 1200px and up */
+        @media (min-width: 1200px) {
+            /* Hero stats - 4 columns */
+            .hero-stats {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            /* Visit grid - 4 columns */
+            .visit-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        /* ===== ACCESSIBILITY ===== */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        :focus-visible {
+            outline: 2px solid var(--color-autumn);
+            outline-offset: 3px;
+        }
+        
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            nav, .scroll-indicator, .cta-button, .scroll-to-top {
+                display: none;
+            }
+            
+            section {
+                page-break-inside: avoid;
+                background: none !important;
+            }
+            
+            .timeline::before {
+                display: none;
+            }
+            
+            footer {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-brand">Rocky Top, TN</div>
+            <ul class="nav-links">
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#adventures">Adventures</a></li>
+                <li><a href="#businesses">Local</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#visit">Visit</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#adventures">Adventures</a></li>
+                <li><a href="#businesses">Local</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#visit">Visit</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to Rocky Top, Tennessee</h1>
+                <p class="hero-tagline">Where History Meets Adventure</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">72K</span>
+                        <span class="stat-label">Acres of ATV Trails</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">800</span>
+                        <span class="stat-label">Miles of Shoreline</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">30 min</span>
+                        <span class="stat-label">to Knoxville</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">135+</span>
+                        <span class="stat-label">Years of Heritage</span>
+                    </div>
+                </div>
+                
+                <a href="#story" class="cta-button">Discover Our Story</a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" aria-hidden="true">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="story">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-subtitle">Our Heritage</p>
+                <h2>A Proud Past, A Bright Future</h2>
+                <p>From rebellion to revitalization, Rocky Top's story is one of resilience, courage, and community spirit.</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-year">Early 1800s</div>
+                    <h3>Coal Creek is Born</h3>
+                    <p>Founded after the 1798 Treaty of Tellico. Welsh miners arrive in 1867, establishing a thriving coal mining community.</p>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-year">1891-1892</div>
+                    <h3>The Coal Creek War</h3>
+                    <p>Miners fought the convict lease system. On Halloween 1891, hundreds of masked miners freed 300 convicts and burned stockades. Tennessee became the first Southern state to end convict leasing in 1893.</p>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-year">1902 & 1911</div>
+                    <h3>Mining Tragedies & Reform</h3>
+                    <p>The Fraterville Mine Disaster killed 216 men and boys, while Cross Mountain claimed 84 lives. These tragedies led to nationwide mining safety reforms.</p>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-year">1936</div>
+                    <h3>Lake City Era</h3>
+                    <p>The town becomes Lake City after the TVA completes Norris Dam, creating opportunities for tourism and recreation.</p>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-year">2014</div>
+                    <h3>Rocky Top Renaissance</h3>
+                    <p>Embracing the famous Tennessee song, the town becomes Rocky Top, launching revitalization focused on tourism and outdoor recreation.</p>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-year">Today</div>
+                    <h3>Growing & Thriving</h3>
+                    <p>New businesses open regularly, outdoor enthusiasts visit from around the world, and the community spirit lives on stronger than ever.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adventures Section -->
+    <section id="adventures">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-subtitle">Outdoor Recreation</p>
+                <h2>Adventure Awaits</h2>
+                <p>From world-class ATV trails to pristine fishing waters, Rocky Top is an outdoor paradise.</p>
+            </div>
+            
+            <div class="adventure-grid">
+                <div class="adventure-card featured fade-in">
+                    <div class="adventure-icon" aria-hidden="true"><i class="fas fa-motorcycle"></i></div>
+                    <h3>Windrock Park</h3>
+                    <p>The largest privately-owned off-road recreation area in America! Over 72,000 acres with 300+ miles of trails. Rocky Top is the ONLY place in Tennessee where ATVs can legally ride on highways.</p>
+                </div>
+                
+                <div class="adventure-card fade-in">
+                    <div class="adventure-icon" aria-hidden="true"><i class="fas fa-fish"></i></div>
+                    <h3>World-Class Fishing</h3>
+                    <p>Cove Lake offers 210 acres of prime fishing. Norris Lake features 800 miles of pristine shoreline and 22+ marinas.</p>
+                </div>
+                
+                <div class="adventure-card fade-in">
+                    <div class="adventure-icon" aria-hidden="true"><i class="fas fa-mountain"></i></div>
+                    <h3>Cove Lake State Park</h3>
+                    <p>Mountain valley setting with 106 campsites, nature trails, paved bike paths, and Rickards Ridge BBQ on site!</p>
+                </div>
+                
+                <div class="adventure-card fade-in">
+                    <div class="adventure-icon" aria-hidden="true"><i class="fas fa-ship"></i></div>
+                    <h3>Norris Lake</h3>
+                    <p>One of the cleanest lakes in North America with 34,000 acres. Perfect for boating, skiing, kayaking, and swimming.</p>
+                </div>
+                
+                <div class="adventure-card fade-in">
+                    <div class="adventure-icon" aria-hidden="true"><i class="fas fa-hiking"></i></div>
+                    <h3>Hiking & Nature</h3>
+                    <p>Explore 11 miles of Cumberland Trail. Great Smoky Mountains National Park is only 30 minutes away.</p>
+                </div>
+                
+                <div class="adventure-card fade-in">
+                    <div class="adventure-icon" aria-hidden="true"><i class="fas fa-location-dot"></i></div>
+                    <h3>Gateway Location</h3>
+                    <p>Perfect I-75 access, 24 miles to Knoxville. Your ideal basecamp for East Tennessee adventures!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local Businesses Section -->
+    <section id="businesses">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-subtitle">Support Local</p>
+                <h2>Downtown & Local Businesses</h2>
+                <p>Small-town charm through locally-owned shops, restaurants, and services. New businesses opening regularly!</p>
+            </div>
+            
+            <div class="business-categories">
+                <div class="category fade-in">
+                    <h3><i class="fas fa-mug-hot category-icon" aria-hidden="true"></i> Coffee & Cafés</h3>
+                    <ul class="business-list">
+                        <li>Coal Creek Coffee</li>
+                        <li>Ling's Café</li>
+                    </ul>
+                </div>
+                
+                <div class="category fade-in">
+                    <h3><i class="fas fa-utensils category-icon" aria-hidden="true"></i> Dining</h3>
+                    <ul class="business-list">
+                        <li>Grumpa Bear BBQ</li>
+                        <li>Vols Diner</li>
+                        <li>Coal Creek Smokehouse BBQ</li>
+                        <li>Glenn's Pizza and Grill</li>
+                        <li>Rickards Ridge BBQ</li>
+                        <li>Mom & Pop Diners</li>
+                    </ul>
+                </div>
+                
+                <div class="category fade-in">
+                    <h3><i class="fas fa-shopping-bag category-icon" aria-hidden="true"></i> Shopping</h3>
+                    <ul class="business-list">
+                        <li>Coal Creek General Store</li>
+                        <li>Shop Rite Grocery Store</li>
+                        <li>Local Boutiques</li>
+                    </ul>
+                </div>
+                
+                <div class="category fade-in">
+                    <h3><i class="fas fa-briefcase category-icon" aria-hidden="true"></i> Services</h3>
+                    <ul class="business-list">
+                        <li>Tattoo Parlors</li>
+                        <li>Local Services</li>
+                        <li>More Opening Every Day!</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="highlight-box fade-in">
+                <p>Rocky Top is on the rise! Downtown is experiencing genuine revitalization with new businesses, improved infrastructure, and a growing community. Come be part of our story.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-subtitle">Community</p>
+                <h2>Events & Celebrations</h2>
+                <p>Rocky Top comes alive with community events, festivals, and celebrations throughout the year.</p>
+            </div>
+            
+            <div class="event-cards">
+                <div class="event-card fade-in">
+                    <h3><i class="fas fa-tree" aria-hidden="true"></i> Christmas Parade</h3>
+                    <p>Annual tradition bringing the community together each December with floats, music, and holiday cheer.</p>
+                </div>
+                
+                <div class="event-card fade-in">
+                    <h3><i class="fas fa-hard-hat" aria-hidden="true"></i> Coal Miners Reunion</h3>
+                    <p>Honoring hardworking miners with guided historical tours, live music, and community gatherings.</p>
+                </div>
+                
+                <div class="event-card fade-in">
+                    <h3><i class="fas fa-flag-checkered" aria-hidden="true"></i> Windrock Events</h3>
+                    <p>Year-round off-road events and races including the famous Spring Shindig bringing riders nationwide.</p>
+                </div>
+                
+                <div class="event-card fade-in">
+                    <h3><i class="fas fa-landmark" aria-hidden="true"></i> Museum Tours</h3>
+                    <p>Guided tours of Coal Creek Miners Museum and historical sites including Militia Hill and Fraterville Miners' Circle.</p>
+                </div>
+                
+                <div class="event-card fade-in">
+                    <h3><i class="fas fa-trophy" aria-hidden="true"></i> Fishing Tournaments</h3>
+                    <p>Competitive fishing events on Norris Lake and Cove Lake throughout the year, drawing anglers from near and far.</p>
+                </div>
+                
+                <div class="event-card fade-in">
+                    <h3><i class="fas fa-music" aria-hidden="true"></i> Live Music</h3>
+                    <p>Local venues feature live music on weekends, including performances at Rickards Ridge BBQ and community gatherings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit Section -->
+    <section id="visit">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-subtitle">Plan Ahead</p>
+                <h2>Plan Your Visit</h2>
+                <p>Everything you need to know to make the most of your Rocky Top adventure.</p>
+            </div>
+            
+            <div class="visit-grid">
+                <div class="visit-info fade-in">
+                    <h3><i class="fas fa-car" aria-hidden="true"></i> Getting Here</h3>
+                    <div class="info-item">I-75 Exit 134 & 141</div>
+                    <div class="info-item">24 miles north of Knoxville</div>
+                    <div class="info-item">30 min to Great Smoky Mountains</div>
+                    <div class="info-item">Rocky Top, TN 37769</div>
+                </div>
+                
+                <div class="visit-info fade-in">
+                    <h3><i class="fas fa-camera" aria-hidden="true"></i> Must-See</h3>
+                    <div class="info-item">Coal Creek Miners Museum</div>
+                    <div class="info-item">Cove Lake State Park</div>
+                    <div class="info-item">Windrock Park</div>
+                    <div class="info-item">Norris Lake Marinas</div>
+                    <div class="info-item">Militia Hill Historical Site</div>
+                </div>
+                
+                <div class="visit-info fade-in">
+                    <h3><i class="fas fa-bed" aria-hidden="true"></i> Stay Nearby</h3>
+                    <div class="info-item">Cove Lake Camping</div>
+                    <div class="info-item">Windrock Park Cabins</div>
+                    <div class="info-item">Norris Lake Rentals</div>
+                    <div class="info-item">Local Hotels & Motels</div>
+                    <div class="info-item">RV Parks & Campgrounds</div>
+                </div>
+                
+                <div class="visit-info fade-in">
+                    <h3><i class="fas fa-file-alt" aria-hidden="true"></i> Permits</h3>
+                    <div class="info-item">Windrock Park Permits (Coal Creek General Store)</div>
+                    <div class="info-item">Tennessee Fishing License (required)</div>
+                    <div class="info-item">ATV Highway Registration (City Hall)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-subtitle">Get Connected</p>
+                <h2>Contact & Resources</h2>
+                <p>Have questions? Want to learn more? We're here to help!</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card fade-in">
+                    <div class="contact-icon" aria-hidden="true"><i class="fas fa-building"></i></div>
+                    <h3>City Hall</h3>
+                    <p>195 South Main Street<br>PO Box 66<br>Rocky Top, TN 37769</p>
+                    <p><strong>Phone:</strong> <a href="tel:8654262838">(865) 426-2838</a></p>
+                    <p><strong>Hours:</strong> Mon-Fri 8AM - 4:30PM</p>
+                </div>
+                
+                <div class="contact-card fade-in">
+                    <div class="contact-icon" aria-hidden="true"><i class="fas fa-handshake"></i></div>
+                    <h3>Chamber of Commerce</h3>
+                    <p>Rocky Top Chamber of Commerce</p>
+                    <p><strong>Email:</strong> <a href="mailto:rockytopchamber@gmail.com">rockytopchamber@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:8654269595">(865) 426-9595</a></p>
+                    <p><strong>Web:</strong> <a href="http://www.rockytoptnchamber.com" target="_blank" rel="noopener">rockytoptnchamber.com</a></p>
+                </div>
+                
+                <div class="contact-card fade-in">
+                    <div class="contact-icon" aria-hidden="true"><i class="fas fa-tools"></i></div>
+                    <h3>Miners Museum</h3>
+                    <p>201 South Main Street<br>Rocky Top, TN 37769</p>
+                    <p><strong>Email:</strong> <a href="mailto:ccminersmuseum@gmail.com">ccminersmuseum@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:8656305006">(865) 630-5006</a></p>
+                    <p><strong>Web:</strong> <a href="https://www.coalcreekminersmuseum.com" target="_blank" rel="noopener">coalcreekminersmuseum.com</a></p>
+                </div>
+            </div>
+            
+            <div class="website-highlight fade-in">
+                <h3>Official City Website</h3>
+                <a href="https://rockytoptn.org" target="_blank" rel="noopener">rockytoptn.org</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- About Section -->
+                <div class="footer-section footer-about">
+                    <h4>About Rocky Top</h4>
+                    <p>Where history meets adventure in the heart of the Appalachian Mountains. From our proud mining heritage to world-class outdoor recreation, Rocky Top offers something special for everyone.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links Section -->
+                <div class="footer-section footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#story">Our Story</a></li>
+                        <li><a href="#adventures">Adventures</a></li>
+                        <li><a href="#businesses">Local Businesses</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#visit">Plan Your Visit</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Attractions Section -->
+                <div class="footer-section footer-links">
+                    <h4>Attractions</h4>
+                    <ul>
+                        <li><a href="https://www.windrockpark.com" target="_blank" rel="noopener">Windrock Park</a></li>
+                        <li><a href="https://tnstateparks.com/parks/cove-lake" target="_blank" rel="noopener">Cove Lake State Park</a></li>
+                        <li><a href="https://www.coalcreekminersmuseum.com" target="_blank" rel="noopener">Coal Creek Miners Museum</a></li>
+                        <li><a href="https://www.tva.com/energy/our-power-system/hydroelectric/norris-dam" target="_blank" rel="noopener">Norris Lake & Dam</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Section -->
+                <div class="footer-section footer-contact">
+                    <h4>Contact Info</h4>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>195 South Main Street<br>Rocky Top, TN 37769</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        <span><a href="tel:8654262838">(865) 426-2838</a></span>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="mailto:info@rockytoptn.org">info@rockytoptn.org</a></span>
+                    </p>
+                    <p>
+                        <i class="fas fa-globe"></i>
+                        <span><a href="https://rockytoptn.org" target="_blank" rel="noopener">rockytoptn.org</a></span>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rocky Top, Tennessee. All rights reserved. A Proud Past, A Bright Future.</p>
+                <p>This microsite was created as a portfolio demonstration project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // ===== MOBILE MENU TOGGLE =====
+        const navToggle = document.querySelector('.nav-toggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        if (navToggle && mobileMenu) {
+            navToggle.addEventListener('click', () => {
+                const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('active');
+            });
+            
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+        
+        // ===== SMOOTH SCROLL WITH VIEW TRANSITIONS API =====
+        const handleNavigation = async (e) => {
+            const target = e.target.closest('a');
+            if (!target || !target.hash) return;
+            
+            const href = target.getAttribute('href');
+            if (!href.startsWith('#')) return;
+            
+            e.preventDefault();
+            const targetElement = document.querySelector(href);
+            
+            if (!targetElement) return;
+            
+            if (mobileMenu && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+            }
+            
+            if (document.startViewTransition) {
+                await document.startViewTransition(() => {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            } else {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        };
+        
+        const navElement = document.querySelector('nav');
+        const heroContent = document.querySelector('.hero-content');
+        const footerElement = document.querySelector('footer');
+        
+        if (navElement) navElement.addEventListener('click', handleNavigation);
+        if (heroContent) heroContent.addEventListener('click', handleNavigation);
+        if (footerElement) footerElement.addEventListener('click', handleNavigation);
+        
+        // ===== HIDE/SHOW NAVIGATION ON SCROLL =====
+        let lastScrollY = window.scrollY;
+        const nav = document.querySelector('nav');
+        let scrollTimeout;
+        
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY > 100) {
+                if (currentScrollY > lastScrollY && !mobileMenu.classList.contains('active')) {
+                    nav.classList.add('hidden');
+                } else {
+                    nav.classList.remove('hidden');
+                }
+            } else {
+                nav.classList.remove('hidden');
+            }
+            
+            lastScrollY = currentScrollY;
+        };
+        
+        window.addEventListener('scroll', () => {
+            if (scrollTimeout) return;
+            scrollTimeout = setTimeout(() => {
+                handleScroll();
+                scrollTimeout = null;
+            }, 100);
+        }, { passive: true });
+        
+        // ===== INTERSECTION OBSERVER FOR ANIMATIONS (FALLBACK) =====
+        if (!CSS.supports('animation-timeline', 'scroll()')) {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                observer.observe(el);
+            });
+        }
+        
+        // ===== KEYBOARD ACCESSIBILITY =====
+        if (mobileMenu) {
+            const focusableElements = 'a[href], button, textarea, input, select';
+            
+            mobileMenu.addEventListener('keydown', (e) => {
+                if (!mobileMenu.classList.contains('active')) return;
+                
+                const focusable = Array.from(mobileMenu.querySelectorAll(focusableElements));
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+                
+                if (e.key === 'Tab') {
+                    if (e.shiftKey) {
+                        if (document.activeElement === first) {
+                            last.focus();
+                            e.preventDefault();
+                        }
+                    } else {
+                        if (document.activeElement === last) {
+                            first.focus();
+                            e.preventDefault();
+                        }
+                    }
+                }
+                
+                if (e.key === 'Escape') {
+                    mobileMenu.classList.remove('active');
+                    if (navToggle) {
+                        navToggle.setAttribute('aria-expanded', 'false');
+                        navToggle.focus();
+                    }
+                }
+            });
+        }
+        
+        // ===== SCROLL TO TOP BUTTON =====
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        if (scrollToTopBtn) {
+            // Show/hide button based on scroll position
+            let scrollBtnTimeout;
+            window.addEventListener('scroll', () => {
+                if (scrollBtnTimeout) return;
+                scrollBtnTimeout = setTimeout(() => {
+                    if (window.scrollY > 500) {
+                        scrollToTopBtn.classList.add('visible');
+                    } else {
+                        scrollToTopBtn.classList.remove('visible');
+                    }
+                    scrollBtnTimeout = null;
+                }, 100);
+            }, { passive: true });
+            
+            // Scroll to top on click
+            scrollToTopBtn.addEventListener('click', async () => {
+                if (document.startViewTransition) {
+                    await document.startViewTransition(() => {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        }
+        
+        console.log('%c🏔️ Rocky Top, Tennessee', 'font-size: 18px; font-weight: bold; color: #2d5016;');
+        console.log('%cPremium compact design with mobile-first responsive architecture', 'font-size: 12px; color: #555;');
+    </script>
+</body>
+</html>
